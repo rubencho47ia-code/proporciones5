@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Razones y proporciones · Grado 5</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f0ff;--card:#fff;--tx:#1f2340;--mut:#5b6088;--br:#e2defa;--nav:#5b3df5;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);font-size:18px}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#14162b;--card:#1f2242;--tx:#eef0ff;--mut:#aab0e0;--br:#34386a;--nav:#3a2bb5}}
+:root[data-theme=dark]{--bg:#14162b;--card:#1f2242;--tx:#eef0ff;--mut:#aab0e0;--br:#34386a;--nav:#3a2bb5}
+:root.cream{--bg:#fbf3dc;--card:#fffaeb;--tx:#2a2a2a;--mut:#555;--br:#e8dcb5;--nav:#b45309}
+*{box-sizing:inherit}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:Lexend,system-ui,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
+body.dys{letter-spacing:.06em;word-spacing:.22em;line-height:2.1}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--nav);z-index:10}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:linear-gradient(120deg,var(--nav),#e0457b);color:#fff;padding:.6rem 1rem}
+h1{margin:0;font-size:1.25rem}h2{margin:.2rem 0}
+button{font:inherit;cursor:pointer;border:0;border-radius:.8rem}
+.tools{display:flex;gap:.4rem;flex-wrap:wrap;margin-top:.4rem}
+.tools button{background:#ffffff30;color:#fff;padding:.2rem .6rem;font-size:.75rem}
+.tools button.on{background:#fff;color:#333}
+nav{display:flex;gap:.3rem;overflow-x:auto;margin-top:.5rem}
+nav button{background:#ffffff25;color:#fff;padding:.4rem .8rem;white-space:nowrap;font-size:.85rem}
+nav button.on{background:#fff;color:var(--nav);font-weight:800}
+#pb{height:8px;background:#ffffff40;border-radius:9px;margin-top:.5rem;overflow:hidden}#pf{height:100%;width:0;background:#ffd93d;transition:width .4s}
+main{max-width:900px;margin:0 auto;padding:1rem}
+section{display:none}section.on{display:block}
+.card{background:var(--card);border:2px solid var(--br);border-radius:1.2rem;padding:1rem;margin:.8rem 0;box-shadow:0 6px 18px #5b3df522}
+.hero{background:linear-gradient(135deg,#6366f1,#ec4899 60%,#f59e0b);color:#fff;text-align:center;border:0}
+.hero .big{font-size:2.6rem;letter-spacing:.3rem}
+.tag{background:var(--nav);color:#fff;border-radius:2rem;padding:.1rem .6rem;font-size:.7rem}
+.sp{background:var(--br);padding:.1rem .5rem}
+.opt{display:block;width:100%;text-align:left;margin:.3rem 0;padding:.6rem .9rem;background:var(--bg);border:2px solid var(--br);color:var(--tx)}
+.opt.sel{border-color:var(--nav);background:#5b3df522}.opt.good{border-color:#16a34a;background:#16a34a33}.opt.bad{border-color:#dc2626;background:#dc262633}
+input{font:inherit;padding:.5rem;border:2px solid var(--br);border-radius:.7rem;background:var(--bg);color:var(--tx);width:8rem}
+#nm{width:100%;max-width:22rem}
+.go{background:var(--nav);color:#fff;padding:.5rem 1.2rem;margin-top:.5rem}
+.fb{margin-top:.4rem;font-weight:600}
+.ch{display:flex;gap:.6rem;align-items:flex-end;justify-content:center;margin:.6rem 0;padding:.6rem;background:var(--bg);border-radius:1rem;overflow-x:auto}
+.b{text-align:center;min-width:3.6rem}.bw{height:130px;display:flex;align-items:flex-end}.bar{width:100%;border-radius:.5rem .5rem 0 0;transition:height .3s}
+.pm button{background:var(--br);color:var(--tx);width:1.9rem;height:1.9rem;margin:.1rem;font-weight:800}
+.dots i{display:inline-block;width:1.1rem;height:1.1rem;border-radius:50%;margin:.1rem}.dots .r{background:#f43f5e}.dots .u{background:#3b82f6}
+.tip{background:#ffd93d44;border-left:6px solid #ffd93d;padding:.5rem .8rem;border-radius:.6rem;margin:.5rem 0}
+.row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:.8rem}
+.rm{position:fixed;left:0;right:0;height:3.2rem;background:#ffe06655;border-block:2px solid #f59e0b;pointer-events:none;display:none;z-index:8}
+.ring{width:9rem;height:9rem;border-radius:50%;display:grid;place-items:center;background:conic-gradient(#16a34a calc(var(--p)*1%),var(--br) 0);margin:auto}
+.ring b{width:6.8rem;height:6.8rem;border-radius:50%;background:var(--card);display:grid;place-items:center;font-size:2.2rem}
+.tb{height:14px;background:var(--br);border-radius:9px;margin-bottom:.5rem}.tb div{height:100%;border-radius:9px}
+#toast{position:fixed;left:50%;bottom:calc(1rem + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#16a34a;color:#fff;padding:.5rem 1rem;border-radius:2rem;display:none;z-index:20}
+.chip{text-align:center;font-size:2rem}.chip b{font-size:.85rem;display:block}
+</style></head><body>
+<header><h1>📐 Razones y proporciones · 5.º <span id="hi"></span></h1>
+<div class="tools"><button data-act="sm" aria-label="Letra más pequeña">A−</button><button data-act="big" aria-label="Letra más grande">A+</button><button data-act="dys">Letra fácil</button><button data-act="cr">Fondo crema</button><button data-act="rl">Regla de lectura</button><button data-act="sv">💾 Guardar</button></div>
+<nav id="nv"></nav><div id="pb"><div id="pf"></div></div><small id="pt"></small></header>
+<main>
+<section id="s0" class="on"><div class="card hero"><div class="big">⚖️ 🟰 📈 ✖️ 🔄</div><h2>¡Bienvenido, matemático!</h2><p>Aprende razones, proporciones y regla de tres con gráficos y juegos.</p></div>
+<div class="card"><h2>✏️ ¿Cómo te llamas?</h2><input id="nm" placeholder="Escribe tu nombre" autocomplete="name" aria-label="Tu nombre">
+<p>💾 Tu progreso se guarda solo en este dispositivo. También puedes pulsar «Guardar».</p>
+<div class="tip">♿ <b>Ayudas de lectura</b> (arriba): letra más grande, letra fácil con más espacio, fondo crema, regla de lectura y el botón 🔊 para que la página lea en voz alta.</div></div>
+<div class="row" id="chips"></div>
+<button class="go" data-act="rs" style="background:#dc2626">🗑️ Borrar mi progreso</button></section>
+<section id="s1"></section><section id="s2"></section><section id="s3"></section><section id="s4"></section>
+<section id="s5"><h2>🏆 Resultados</h2><div id="res"><div class="card"><p>Cuando termines, genera tu nota.</p><button class="go" data-act="grade">🏆 Generar mi nota</button></div></div></section>
+</main><div class="rm" id="rm"></div><div id="toast"></div>
+<script>
+const TN=["Razones","Proporciones","Magnitudes","Regla de 3 directa","Regla de 3 inversa"],EM=["⚖️","🟰","📈","✖️","🔄"],COL=["#6366f1","#ec4899","#f59e0b","#10b981","#06b6d4"];
+const TIP=["Practica con objetos reales (rojas : azules). Cuida el orden y simplifica dividiendo los dos números entre el mismo número.","Usa la multiplicación cruzada: en 2/5 = 4/10 comprueba 2×10 = 5×4. Para hallar el dato que falta, multiplica o divide los dos términos por el mismo número.","Pregúntate: si una sube, ¿la otra también sube? Entonces es directa. ¿Si una sube la otra baja? Entonces es inversa. Haz una tablita.","Escribe una tabla con los datos, multiplica en cruz y divide entre el dato que queda solo. Comprueba: más panes, más dinero.","En la inversa multiplica los datos conocidos (4 × 6) y divide entre el otro dato. Comprueba: más obreros, menos días."];
+const chart=(l,v,m,ed,k)=>`<div class="ch">${l.map((x,i)=>`<div class="b"><b>${v[i]}</b><div class="bw"><div class="bar" style="height:${Math.max(v[i]/m*100,2)}%;background:${COL[i%5]}"></div></div>${ed.includes(i)?`<div class="pm"><button data-c="${k}" data-i="${i}" data-d="-1" aria-label="Bajar">−</button><button data-c="${k}" data-i="${i}" data-d="1" aria-label="Subir">+</button></div>`:""}<small>${x}</small></div>`).join("")}</div>`;
+const dots=(a,b)=>`<span class="dots">${'<i class="r"></i>'.repeat(a)}${'<i class="u"></i>'.repeat(b)}</span>`;
+const O=(t,q,o,a,c)=>({t,q,o,a,c}),N=(t,q,n)=>({t,q,n}),C=(t,q,l,v,g,e,m)=>({t,q,c:{l,v,g,e,m}});
+const A=[
+N(0,"En un salón hay 12 niñas y 8 niños. Por cada 2 niños hay ___ niñas.",3),
+O(0,"Una receta usa 2 tazas de harina por 1 de azúcar. ¿Cuál es la razón harina : azúcar?",["1 : 2","2 : 1","2 : 3"],1),
+C(0,"Por cada 1 jugo hay 2 galletas. Con 3 jugos, completa las galletas (usa + y −).",["Jugos","Galletas"],[3,0],[3,6],[1],8),
+O(0,"Hay 3 gatos y 5 perros. ¿Cuál es la razón gatos : perros?",["5 : 3","3 : 5","3 : 8"],1),
+O(1,"¿Cuál de estas es una proporción?",["2/3 = 4/6","2/3 = 4/5","1/2 = 2/3"],0),
+N(1,"Completa la proporción: 1/2 = ___/10",5),
+C(1,"2 bolsas tienen 6 dulces. Completa los dulces que hay en 4 y en 6 bolsas.",["2 bolsas","4 bolsas","6 bolsas"],[6,0,0],[6,12,18],[1,2],18),
+N(1,"Completa la proporción: 3/4 = 9/___",12),
+O(2,"Más kilos de manzana, más dinero que pagas. La relación es…",["directa","inversa","ninguna"],0),
+O(2,"Más obreros, menos días para terminar la obra. La relación es…",["directa","inversa"],1),
+O(2,"Más velocidad del carro, menos tiempo en llegar. La relación es…",["directa","inversa"],1),
+C(2,"Relación directa: 1 cuaderno cuesta 2 mil pesos. Completa el precio de 2 y 3 cuadernos (en miles).",["1 cuaderno","2 cuadernos","3 cuadernos"],[2,0,0],[2,4,6],[1,2],8),
+N(3,"2 lápices cuestan $1.000. ¿Cuánto cuestan 6 lápices?",3000),
+N(3,"Un carro recorre 60 km en 1 hora. ¿Cuántos km recorre en 3 horas?",180),
+O(3,"3 kg de arroz cuestan $9.000. ¿Cuánto cuestan 5 kg?",["$12.000","$15.000","$18.000"],1),
+C(3,"Un grifo llena 4 litros por minuto. Completa los litros en 2 y 3 minutos.",["1 min","2 min","3 min"],[4,0,0],[4,8,12],[1,2],12),
+N(4,"4 obreros hacen una obra en 6 días. ¿En cuántos días la harán 8 obreros?",3),
+N(4,"2 bombas llenan un tanque en 12 horas. ¿En cuántas horas lo llenan 6 bombas?",4),
+C(4,"Se reparten 12 dulces en partes iguales. Completa cuántos recibe cada niño.",["2 niños","3 niños","4 niños","6 niños"],[6,0,0,0],[6,4,3,2],[1,2,3],6),
+O(4,"3 pintores pintan una pared en 8 horas. ¿Cuánto tardan 6 pintores?",["16 h","4 h","24 h"],1)];
+const W=[
+O(0,"Mira la gráfica de kilos de banano vendidos. Si sigue igual, ¿cuántos kg se venderán el jueves?",["35","40","45"],1,{l:["Lun","Mar","Mié"],v:[10,20,30],m:40}),
+O(2,"Mira la gráfica. ¿Qué pasa con los días cuando aumentan los obreros?",["aumentan","disminuyen","no cambian"],1,{l:["2 obreros","4 obreros","6 obreros"],v:[12,6,4],m:12}),
+O(0,"En la gráfica hay niños y niñas. ¿Cuál es la razón niños : niñas simplificada?",["2 : 1","1 : 2","8 : 4"],0,{l:["Niños","Niñas"],v:[8,4],m:10}),
+C(0,"Completa la gráfica de la razón 1 : 3. Hay 2 fichas rojas, ¿cuántas azules hay?",["Rojas","Azules"],[2,0],[2,6],[1],8),
+C(3,"Un pan cuesta mil pesos. Completa el precio de 2, 3 y 4 panes (en miles).",["1 pan","2 panes","3 panes","4 panes"],[1,0,0,0],[1,2,3,4],[1,2,3],5),
+C(4,"24 stickers se reparten en partes iguales. Completa cuántos recibe cada niño.",["2 niños","4 niños","6 niños","8 niños"],[12,0,0,0],[12,6,4,3],[1,2,3],12)];
+const E=[
+O(0,"Hay 5 fichas rojas y 10 azules. ¿Cuál es la razón rojas : azules?",["1 : 2","2 : 1","5 : 15"],0),
+O(0,"La razón 3 : 4 significa…",["por cada 3 de una cantidad hay 4 de otra","3 más 4","3 menos 4"],0),
+O(0,"La razón 6 : 3 simplificada es…",["3 : 6","2 : 1","1 : 2"],1),
+O(0,"4 pasteles para 2 personas. ¿Cuántos pasteles toca por persona?",["1","2","4"],1),
+O(1,"2/5 = 4/___",["8","10","6"],1),
+O(1,"¿1/2 = 3/6 es una proporción?",["No","Sí, las dos razones son iguales"],1),
+O(1,"6/9 = x/3. ¿Cuánto vale x?",["1","2","3"],1),
+O(1,"4/8 = x/6. ¿Cuánto vale x?",["2","3","4"],1),
+O(2,"Más horas trabajadas, más pago. Es relación…",["directa","inversa"],0),
+O(2,"Más personas comen, menos días dura la comida. Es relación…",["directa","inversa"],1),
+O(2,"Más litros de gasolina, más kilómetros. Es relación…",["inversa","directa"],1),
+O(2,"Más grifos abiertos, menos tiempo para llenar el tanque. Es relación…",["directa","inversa"],1),
+O(3,"3 helados cuestan $6.000. ¿Cuánto cuestan 6 helados?",["$9.000","$12.000","$18.000"],1),
+O(3,"5 m de tela cuestan $10.000. ¿Cuánto cuestan 2 m?",["$4.000","$5.000","$2.000"],0),
+O(3,"Una máquina hace 20 piezas por hora. ¿Cuántas hace en 4 horas?",["24","60","80"],2),
+O(3,"4 cuadernos cuestan $8.000. ¿Cuánto cuestan 3 cuadernos?",["$5.000","$6.000","$9.000"],1),
+O(4,"5 obreros hacen una obra en 10 días. ¿Cuántos días tardan 10 obreros?",["20","5","15"],1),
+O(4,"6 llaves llenan un tanque en 3 horas. ¿Cuánto tardan 3 llaves?",["6 h","9 h","1,5 h"],0),
+O(4,"Un bus a 40 km/h tarda 6 h. ¿Cuánto tarda a 80 km/h?",["12 h","3 h","6 h"],1),
+O(4,"12 caballos comen pasto durante 4 días. ¿Cuánto dura con 6 caballos?",["2 días","8 días","16 días"],1)];
+const K={a:A,w:W,e:E};
+const TH=[
+`<p>Una <b>razón</b> compara dos cantidades con una división. Se escribe <b>a : b</b> y se lee «a es a b».</p><p>${dots(2,3)}</p><p>2 círculos rojos y 3 azules → razón <b>2 : 3</b>. Se simplifica dividiendo los dos números entre el mismo número: <b>4 : 6 = 2 : 3</b>.</p><div class="tip">💡 El orden importa: 2 : 3 no es igual a 3 : 2.</div>`,
+`<p>Una <b>proporción</b> es una igualdad entre dos razones.</p><p>${dots(2,3)} <b>=</b> ${dots(4,6)}</p><p><b>2 : 3 = 4 : 6</b>. Truco de la multiplicación cruzada: 2 × 6 = 3 × 4 = 12 ✔️</p><div class="tip">💡 Para hallar el dato que falta, multiplica o divide los dos términos por el mismo número.</div>`,
+`<p>Dos <b>magnitudes</b> están <b>correlacionadas</b> cuando, al cambiar una, la otra también cambia.</p><div class="row"><div><b>Directa 📈</b> (suben juntas)<br>Kilos de manzana y precio (miles)${chart(["1 kg","2 kg","3 kg"],[2,4,6],8,[],"t")}</div><div><b>Inversa 📉</b> (una sube, la otra baja)<br>Obreros y días${chart(["1 obrero","2 obreros","4 obreros"],[8,4,2],8,[],"t")}</div></div>`,
+`<p>Si las magnitudes son <b>directas</b>, se multiplica en cruz y se divide.</p><div class="tip">🍞 <b>3 panes cuestan $6.000. ¿Cuánto cuestan 5 panes?</b><br>① Tabla: 3 panes → 6.000 · 5 panes → ?<br>② Multiplica 5 × 6.000 = 30.000<br>③ Divide entre 3 → <b>$10.000</b></div><p>Comprueba: más panes, más dinero ✔️</p>`,
+`<p>Si son <b>inversas</b>, se multiplican los datos conocidos y se divide entre el otro dato.</p><div class="tip">👷 <b>4 obreros terminan en 6 días. ¿Y 8 obreros?</b><br>① Multiplica 4 × 6 = 24<br>② Divide entre 8 → <b>3 días</b></div><p>Comprueba: más obreros, menos días ✔️</p>`];
+const KEY="razones5-v1";let S={n:"",v:{},k:{},p:{z:18,d:0,c:0}};
+try{const x=JSON.parse(localStorage.getItem(KEY));if(x)S=Object.assign(S,x)}catch(e){}
+const $=id=>document.getElementById(id),esc=s=>s.replace(/[&<>"]/g,c=>"&#"+c.charCodeAt(0)+";");
+const ok=(it,v)=>it.o?v===it.a:it.n!==undefined?(v!==undefined&&v!==""&&+v===it.n):JSON.stringify(v||it.c.v)===JSON.stringify(it.c.g);
+function card(kd,i){const it=K[kd][i],k=kd+i,v=S.v[k],ch=kd!="e"&&S.k[k];
+let h=`<div class="card" id="${k}"><div><b>${i+1}.</b> <span class="tag">${EM[it.t]} ${TN[it.t]}</span> <button class="sp" data-s="${k}" aria-label="Escuchar">🔊</button></div><p>${it.q}</p>`;
+if(it.c){const e=it.c.e||[];h+=chart(it.c.l,e.length?(v||it.c.v):it.c.v,it.c.m,e,k)}
+if(it.o)h+=it.o.map((o,j)=>`<button class="opt ${ch?(j===it.a?"good":v===j?"bad":""):(v===j?"sel":"")}" data-k="${k}" data-i="${j}">${o}</button>`).join("");
+else if(it.n!==undefined)h+=`<input type="number" inputmode="numeric" data-k="${k}" value="${v??""}" aria-label="Tu respuesta">`;
+if(kd!="e")h+=`<br><button class="go" data-chk="${k}">Comprobar</button><div class="fb">${ch?(v===undefined||v===""?"✍️ Primero escribe o elige tu respuesta.":ok(it,v)?"🎉 ¡Muy bien!":"🤔 Casi. Pista: "+TIP[it.t]):""}</div>`;
+return h+"</div>"}
+const rr=k=>{$(k).outerHTML=card(k[0],+k.slice(1))};
+function build(){
+$("chips").innerHTML=TN.map((n,i)=>`<div class="card chip">${EM[i]}<b>${n}</b></div>`).join("");
+$("s1").innerHTML="<h2>📚 Teoría</h2>"+TH.map((h,i)=>`<div class="card" id="t${i}"><h2>${EM[i]} ${TN[i]} <button class="sp" data-s="t${i}" aria-label="Escuchar">🔊</button></h2>${h}</div>`).join("");
+$("s2").innerHTML="<h2>🛠️ Taller de práctica</h2><p>Analiza las gráficas y completa las que faltan.</p>"+W.map((_,i)=>card("w",i)).join("");
+$("s3").innerHTML="<h2>🎮 Ejercicios interactivos</h2><p>20 actividades. Pulsa «Comprobar» para ver si vas bien.</p>"+A.map((_,i)=>card("a",i)).join("");
+$("s4").innerHTML="<h2>📝 Evaluación</h2><p>20 preguntas. Elige la mejor respuesta.</p>"+E.map((_,i)=>card("e",i)).join("")+'<button class="go" data-act="grade">🏆 Generar mi nota</button>';
+$("nm").value=S.n;hi()}
+const hi=()=>{$("hi").textContent=S.n?"· "+S.n:""};
+function prog(){let n=0;for(const kd in K)K[kd].forEach((_,i)=>{const v=S.v[kd+i];if(v!==undefined&&v!=="")n++});$("pf").style.width=n/46*100+"%";$("pt").textContent=`Progreso: ${n} de 46 actividades`;return n}
+function save(m){const t=$("toast");try{localStorage.setItem(KEY,JSON.stringify(S));if(m)msg("💾 Progreso guardado")}catch(e){if(m)msg("No se pudo guardar en este navegador")}}
+function msg(s){const t=$("toast");t.textContent=s;t.style.display="block";clearTimeout(msg.t);msg.t=setTimeout(()=>t.style.display="none",1800)}
+const ch=()=>{prog();save()};
+function ap(){document.documentElement.style.fontSize=S.p.z+"px";document.body.classList.toggle("dys",!!S.p.d);document.documentElement.classList.toggle("cream",!!S.p.c);
+document.querySelector("[data-act=dys]").classList.toggle("on",!!S.p.d);document.querySelector("[data-act=cr]").classList.toggle("on",!!S.p.c);save()}
+function tab(n){document.querySelectorAll("main>section").forEach((s,i)=>s.classList.toggle("on",i==n));document.querySelectorAll("#nv button").forEach((b,i)=>b.classList.toggle("on",i==n));window.scrollTo(0,0)}
+function say(id){try{const u=new SpeechSynthesisUtterance($(id).innerText.replace(/🔊|Comprobar/g,""));u.lang="es-CO";u.rate=.85;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){msg("Tu dispositivo no puede leer en voz alta")}}
+function grade(){
+if(!S.n.trim()){tab(5);$("res").innerHTML='<div class="card tip">✏️ Primero escribe tu nombre en la pestaña <b>Inicio</b>.</div>';return}
+const tr=[0,0,0,0,0],tt=[0,0,0,0,0],ct={a:0,w:0,e:0};
+for(const kd in K)K[kd].forEach((it,i)=>{const r=ok(it,S.v[kd+i]);tt[it.t]++;if(r){tr[it.t]++;ct[kd]++}});
+const f=ct.e/20*.5+ct.a/20*.3+ct.w/6*.2,nota=(f*5).toFixed(1),n=prog(),
+lv=nota>=4.6?"🌟 Desempeño superior":nota>=4?"😄 Desempeño alto":nota>=3?"🙂 Desempeño básico":"💪 Necesitas practicar más";
+const tp=TN.map((x,t)=>({x,t,p:Math.round(tr[t]/tt[t]*100)})),dif=tp.filter(o=>o.p<80);
+$("res").innerHTML=`<div class="card" style="text-align:center"><h2>${esc(S.n)}</h2><div class="ring" style="--p:${f*100}"><b>${nota}</b></div><h3>${lv}</h3><p>Nota de 0,0 a 5,0 · Evaluación ${ct.e}/20 · Ejercicios ${ct.a}/20 · Taller ${ct.w}/6</p>${n<46?`<p>⚠️ Te faltaron ${46-n} actividades por responder.</p>`:""}</div>
+<div class="card"><h2>📊 Mi desempeño por tema</h2>${tp.map(o=>`<div>${EM[o.t]} ${o.x} · <b>${o.p}%</b></div><div class="tb"><div style="width:${o.p}%;background:${o.p>=80?"#16a34a":o.p>=60?"#f59e0b":"#dc2626"}"></div></div>`).join("")}</div>
+<div class="card"><h2>🔍 Dificultades y cómo superarlas</h2>${dif.length?dif.map(o=>`<div class="tip">${o.p<60?"⚠️ Dificultad":"🔸 Para reforzar"} en <b>${o.x}</b> (${o.p}%).<br>👉 ${TIP[o.t]}</div>`).join(""):"<p>🌟 No se observaron dificultades. ¡Excelente trabajo!</p>"}</div>
+<button class="go" data-act="pr">🖨️ Imprimir</button> <button class="go" data-tab="3">🔁 Seguir practicando</button>`;
+tab(5)}
+function act(a,b){
+if(a=="big"||a=="sm"){S.p.z=Math.max(14,Math.min(28,S.p.z+(a=="big"?2:-2)));ap()}
+else if(a=="dys"){S.p.d^=1;ap()}else if(a=="cr"){S.p.c^=1;ap()}
+else if(a=="rl"){const r=$("rm");r.style.display=r.style.display=="block"?"none":"block";b.classList.toggle("on")}
+else if(a=="sv")save(1);else if(a=="grade")grade();else if(a=="pr")window.print();
+else if(a=="rs"){if(b.dataset.r){S={n:"",v:{},k:{},p:S.p};try{localStorage.removeItem(KEY)}catch(e){}build();prog();b.dataset.r="";b.textContent="🗑️ Borrar mi progreso";msg("Progreso borrado")}else{b.dataset.r=1;b.textContent="¿Seguro? Pulsa otra vez"}}}
+document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;const d=b.dataset;
+if(d.tab)tab(+d.tab);else if(d.s)say(d.s);
+else if(d.c){const k=d.c,it=K[k[0]][+k.slice(1)],a=(S.v[k]||it.c.v).slice();a[+d.i]=Math.max(0,Math.min(it.c.m,a[+d.i]+ +d.d));S.v[k]=a;S.k[k]=0;rr(k);ch()}
+else if(d.k){S.v[d.k]=+d.i;S.k[d.k]=0;rr(d.k);ch()}
+else if(d.chk){S.k[d.chk]=1;rr(d.chk);ch()}
+else if(d.act)act(d.act,b)});
+document.addEventListener("input",e=>{const t=e.target;if(t.id=="nm"){S.n=t.value;hi();save()}else if(t.dataset.k){S.v[t.dataset.k]=t.value;S.k[t.dataset.k]=0;ch()}});
+document.addEventListener("pointermove",e=>{$("rm").style.top=e.clientY-25+"px"});
+$("nv").innerHTML=["🏠 Inicio","📚 Teoría","🛠️ Taller","🎮 Ejercicios","📝 Evaluación","🏆 Resultados"].map((x,i)=>`<button data-tab="${i}"${i?"":' class="on"'}>${x}</button>`).join("");
+build();prog();ap();
+</script></body></html>
